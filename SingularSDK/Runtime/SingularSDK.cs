@@ -1836,12 +1836,20 @@ namespace Singular
             }
         }
 
+        [Preserve]
         private class SingularGlobalProperty
         {
+            [Preserve]
+            [JsonProperty]
             public string Key { get; set; }
+            [Preserve]
+            [JsonProperty]
             public string Value { get; set; }
+            [Preserve]
+            [JsonProperty]
             public bool OverrideExisting { get; set; }
 
+            [Preserve]
             public SingularGlobalProperty(string key, string value, bool overrideExisting)
             {
                 Key = key;
